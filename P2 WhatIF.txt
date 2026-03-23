@@ -1,0 +1,156 @@
+Goal Seek is a What-If Analysis tool in MS Excel used to find the required input value to achieve a desired result by changing one variable.
+
+Your Data (Excel Sheet)
+
+Assume this layout in Excel:
+
+A	B	C	D	E
+srno	item	quantity	price	total
+1	books	10	300	3000
+2	pens	5	20	100
+3	highlighter	10	50	500
+4	sticky notes	5	25	125
+⚠ IMPORTANT FIRST STEP (Must Do)
+
+The total column must have a formula, not a fixed value.
+
+Step 1: Enter formula for TOTAL
+
+Click on cell E2 and type:
+
+=C2*D2
+
+Press Enter
+
+Now drag down the formula for other rows.
+
+✔ Now Excel understands:
+
+Total = Quantity × Price
+🎯 Goal Seek Example (Very Important)
+Problem Statement:
+
+You want the total of BOOKS to become 5000.
+Find how many books (quantity) are required.
+
+🧭 Steps to Apply Goal Seek
+Step 2: Open Goal Seek
+Click on cell E2 (total = 3000)
+Go to:
+Data → What-If Analysis → Goal Seek
+Step 3: Fill the Goal Seek Dialog Box
+Field	Value
+Set cell	E2
+To value	5000
+By changing cell	C2
+
+Click OK
+
+✅ Result
+
+Excel will automatically change:
+
+Quantity = 17
+
+Because:
+
+17 × 300 = 5100 (closest possible value)
+📌 Another Quick Example (Pens)
+
+Goal: Total = 200
+
+Select E3
+Set value = 200
+Change cell = C3
+
+✅ Result:
+
+Quantity = 10
+
+Scenario Manager in MS Excel is a What-If Analysis tool used to create and compare multiple scenarios by changing input values and analyzing their impact on results.
+What is Scenario Manager?
+
+Scenario Manager is a What-If Analysis tool in MS Excel that lets you compare multiple sets of input values and see how they affect the final result.
+
+👉 Unlike Goal Seek (1 value), Scenario Manager compares MANY cases.
+
+📊 Your Data (Same Sheet)
+A	B	C	D	E
+srno	item	quantity	price	total
+1	books	10	300	=C2*D2
+2	pens	5	20	=C3*D3
+3	highlighter	10	50	=C4*D4
+4	sticky notes	5	25	=C5*D5
+
+⚠ Total column must have formula
+
+🎯 Scenario Manager Example
+
+We want to analyze different pricing scenarios for BOOKS.
+
+🧭 Step-by-Step: Scenario Manager in Excel
+Step 1: Select the Changing Cells
+
+For books (row 2):
+
+Quantity → C2
+Price → D2
+Step 2: Open Scenario Manager
+
+Go to:
+
+Data → What-If Analysis → Scenario Manager
+
+Click Add
+
+Step 3: Create Scenarios
+🔹 Scenario 1: Current Scenario
+Scenario name: Current
+Changing cells: C2, D2
+Click OK
+Enter values:
+Quantity = 10
+Price = 300
+🔹 Scenario 2: High Demand
+
+Click Add
+
+Scenario name: High Demand
+Changing cells: C2, D2
+Values:
+Quantity = 20
+Price = 320
+🔹 Scenario 3: Discount Offer
+
+Click Add
+
+Scenario name: Discount Offer
+Changing cells: C2, D2
+Values:
+Quantity = 15
+Price = 250
+
+Click OK
+
+📊 Step 4: View Scenario Summary
+
+In Scenario Manager, click Summary
+
+Choose:
+Scenario Summary
+Result cell: E2 (total)
+
+Click OK
+
+✅ Result (Automatically Generated Table)
+Scenario	Quantity	Price	Total
+Current	10	300	3000
+High Demand	20	320	6400
+Discount Offer	15	250	3750
+🧠 Key Differences (Exam Focus)
+Goal Seek	Scenario Manager
+One target value	Multiple cases
+One changing cell	Multiple changing cells
+Finds exact value	Compares outcomes
+Single result	Summary report
+
